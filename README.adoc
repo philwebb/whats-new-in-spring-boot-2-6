@@ -1,0 +1,8 @@
+## What's New in Spring Boot 2.6
+
+Demo code from the webinar "What's New in Spring Boot 2.6".
+
+https://github.com/spring-projects/spring-boot/wiki/Spring-Boot-2.6-Release-Notes
+
+https://github.com/spring-projects/spring-boot/milestones
+
