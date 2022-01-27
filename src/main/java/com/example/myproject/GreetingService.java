@@ -1,6 +1,5 @@
 package com.example.myproject;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -8,11 +7,11 @@ public class GreetingService {
 
 	private final GreetingProperties properties;
 
-	@Autowired
-	private Capitalizer capitalizer;
+	private final Capitalizer capitalizer;
 
-	GreetingService(GreetingProperties properties) {
+	GreetingService(GreetingProperties properties, Capitalizer capitalizer) {
 		this.properties = properties;
+		this.capitalizer = capitalizer;
 	}
 
 	public String greet(String name) {
