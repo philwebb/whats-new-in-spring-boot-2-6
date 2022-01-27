@@ -18,7 +18,7 @@ public class NameController {
 		return nameService.capitalize(name);
 	}
 
-	@GetMapping("greet/{name}/{name}")
+	@GetMapping("greet/{surname}/{name}")
 	String greet(@PathVariable String name) {
 		return nameService.greet(name);
 	}
