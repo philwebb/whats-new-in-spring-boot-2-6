@@ -1,21 +1,19 @@
 package com.example.myproject;
 
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 @Service
 public class GreetingService {
 
 	private final GreetingProperties properties;
 
-	private final Capitalizer capitalizer;
-
-	GreetingService(GreetingProperties properties, Capitalizer capitalizer) {
+	GreetingService(GreetingProperties properties) {
 		this.properties = properties;
-		this.capitalizer = capitalizer;
 	}
 
 	public String greet(String name) {
-		return String.format("%s %s", properties.salutation(), capitalizer.capitalize(name));
+		return String.format("%s %s", properties.salutation(), StringUtils.capitalize(name));
 	}
 
 }

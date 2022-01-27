@@ -1,9 +1,10 @@
 package com.example.myproject;
 
 import org.springframework.stereotype.Service;
+import org.springframework.util.StringUtils;
 
 @Service
-public class NameService implements Capitalizer {
+public class NameService {
 
 	private final GreetingService greetingService;
 
@@ -11,11 +12,8 @@ public class NameService implements Capitalizer {
 		this.greetingService = greetingService;
 	}
 
-	@Override
 	public String capitalize(String string) {
-		char[] chars = string.toCharArray();
-		chars[0] = Character.toUpperCase(chars[0]);
-		return new String(chars);
+		return StringUtils.capitalize(string);
 	}
 
 	public String greet(String name) {
